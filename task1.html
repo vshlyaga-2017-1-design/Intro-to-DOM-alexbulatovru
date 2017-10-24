@@ -6,12 +6,20 @@
     <script>
     document.addEventListener("DOMContentLoaded", function() {
       console.log("Hello!");
+      var d1=document.getElementById("p1");
+    	var d2=document.getElementById("p2");
+    	var d11=d1.cloneNode(true);
+    	var d22=d2.cloneNode(true);
+    	d2.parentNode.insertBefore(d11,d2);
+    	d1.parentNode.insertBefore(d22,d1);
+    	d1.parentNode.removeChild(d1);
+    	d2.parentNode.removeChild(d2);
     });
     </script>
   </head>
   <body>
-    <p>1</p>
-    <p>2</p>
+    <p id="p1">1</p>
+    <p id="p2">2</p>
     <p>3</p>
     <p>4</p>
     <p>5</p>
